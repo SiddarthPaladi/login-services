@@ -60,7 +60,7 @@ jobs:
 
       - name: SSH into Server and Deploy Docker
         run: |
-          sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -o StrictHostKeyChecking=no "${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}" << 'EOF'
+          sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -p 27 -o StrictHostKeyChecking=no "${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}" << 'EOF'
             docker pull siddarthpaladi/login-service:latest
             docker stop login-service || true
             docker rm login-service || true
