@@ -25,3 +25,8 @@ jobs:
     - name: Build with Maven
       run: mvn clean package
 
+    - name: Build docker image
+      run: Docker build -t login-service .
+
+
+
