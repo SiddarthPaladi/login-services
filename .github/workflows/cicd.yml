@@ -26,7 +26,7 @@ jobs:
       run: mvn clean package
 
     - name: Build docker image
-      run: Docker build -t login-service .
+      run: docker build -t login-service .
 
 
 
