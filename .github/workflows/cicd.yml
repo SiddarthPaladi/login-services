@@ -35,6 +35,9 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Push Docker Image
+      run: docker tag login-service:latest ${{ secrets.DOCKERHUB_USERNAME }}/login-service:latest
+
+    - name: Tag Docker Image
       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/login-service:latest
 
 
