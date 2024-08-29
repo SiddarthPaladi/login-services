@@ -26,7 +26,7 @@ jobs:
       run: mvn clean package
 
     - name: Build docker image
-      run: docker/setup-buildx-action@v2
+      run: docker build -t login-service .
 
     - name: Login to Docker Hub
       uses: docker/login-action@v3
