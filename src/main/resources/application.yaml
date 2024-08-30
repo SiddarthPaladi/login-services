@@ -2,9 +2,9 @@ spring:
   application:
     name: MoveCloud-Login-Service
   datasource:
-    url: jdbc:mysql://localhost:3306/movecloud
+    url: jdbc:mysql://75.182.163.60:3306/movecloud
     username: root
-    password: dushyanth
+    password: Movecloud@1
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
